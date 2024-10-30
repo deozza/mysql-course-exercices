@@ -1,0 +1,13 @@
+{
+    "name": "root/html",
+    "type": "project",
+    "require-dev": {
+        "fakerphp/faker": "^1.23"
+    },
+    "autoload": {
+        "psr-4": {
+            "Root\\Html\\": "src/"
+        }
+    },
+    "require": {}
+}
