@@ -7,6 +7,7 @@
 - [How to initialize a database](#how-to-initialize-a-database)
 - [Exercices](#exercices)
   - [Library.sql](#librarysql)
+  - [Company.sql](#companysql)
 
 ## Requirements
 
@@ -16,7 +17,7 @@
 ## How to install
 
 1. `git clone https://github.com/deozza/mysql-course`
-2. `cd mysql-course`
+2. `cd mysql-course-exercices`
 3. `docker compose up -d --build`
 4. `docker compose exec mysql-course-faker composer install`
 
@@ -49,3 +50,15 @@ Exemple with the library database :
 14. afficher l'age des auteurs morts après 50 ans
 15. afficher le nombre de livre le plus écrit en une année, sans utiliser ORDER BY
 16. afficher le nom de l'éditeur qui a fait le plus de rééditions de livres différents
+
+### Company.sql
+
+1. afficher les 10 derniers meetings qui ont eu lieu à Mayotte
+2. afficher la paie totale (salaire + bonus) la plus élevée de Avril 2024, ainsi que le nom et le prénom du salarié correspondant
+3. afficher le nombre de meetings qu'a assisté Cedrick Waters
+4. vérifier si la salle "quam" du bâtiment "Bode, Blanda and Ebert" est réservée le 10 Novembre 2024 entre 12:00 et 18:00
+5. afficher le nom, le prénom et l'email des subordonnés de Joey Crooks
+6. afficher le nom, le prénom et la date de naissances des personnes qui sont directeur.ices de quelque chose et qui ont entre 25 et 30 ans
+7. afficher le nom et l'adresse du bâtiment avec le plus de salles au 4ème étage
+8. afficher la date, le nom de la salle, son étage, l'adresse du bâtiment, des 2 meetings avec le plus de participants
+9. afficher les dépenses totales en paie de l'année 2024 par pays
