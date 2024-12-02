@@ -25,7 +25,7 @@ WHERE employees.firstname = 'Cedrick' AND employees.lastname = 'Waters';
 SELECT meetings.date
 FROM rooms
 INNER JOIN buildings ON rooms.building_id = buildings.id
-JOIN meetings ON meetings.room_id = rooms.id
+INNER JOIN meetings ON meetings.room_id = rooms.id
 WHERE rooms.name = 'quam'
   AND buildings.name = 'Bode, Blanda and Ebert'
   AND meetings.date BETWEEN '2024-11-10 12:00:00' AND '2024-11-10 18:00:00';
