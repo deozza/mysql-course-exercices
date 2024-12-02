@@ -1,0 +1,31 @@
+# Dictionnaire de données
+
+## Table: products
+- **id**: INT, Primary Key, Identifiant unique du produit.
+- **name**: VARCHAR(255), Non nul, Nom du produit.
+- **price**: DECIMAL(10, 2), Non nul, Prix du produit.
+- **stock**: INT, Non nul, Quantité en stock.
+
+## Table: customers
+- **id**: INT, Primary Key, Identifiant unique du client.
+- **name**: VARCHAR(255), Non nul, Nom du client.
+- **email**: VARCHAR(255), Non nul, Adresse e-mail du client.
+
+## Table: orders
+- **id**: INT, Primary Key, Identifiant unique de la commande.
+- **customer_id**: INT, Foreign Key, Référence à l'identifiant du client.
+- **order_date**: DATE, Non nul, Date de la commande.
+
+## Table: order_items
+- **id**: INT, Primary Key, Identifiant unique de l'élément de commande.
+- **order_id**: INT, Foreign Key, Référence à la commande.
+- **product_id**: INT, Foreign Key, Référence au produit.
+- **quantity**: INT, Non nul, Quantité commandée.
+
+## Table: reviews
+- **id**: INT, Primary Key, Identifiant unique de l'avis.
+- **product_id**: INT, Foreign Key, Référence au produit.
+- **customer_id**: INT, Foreign Key, Référence au client.
+- **rating**: INT, Non nul, Note attribuée.
+- **comment**: TEXT, Optionnel, Commentaire du client.
+
