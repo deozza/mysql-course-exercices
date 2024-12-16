@@ -27,5 +27,8 @@ CREATE TABLE transactions(
     from_account VARCHAR(255) NOT NULL,
     to_account VARCHAR(255) NOT NULL,
     amount FLOAT(6,2) NOT NULL,
-    date DATE DEFAULT CURDATE()
+    date DATE DEFAULT CURDATE(),
+    is_validated TINYINT(1),
+    FOREIGN KEY (from_account) REFERENCES account(id),
+    FOREIGN KEY (to_account) REFERENCES account(id)
 );

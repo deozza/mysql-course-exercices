@@ -6,9 +6,9 @@ WHERE buildings.country = 'Mayotte'
 ORDER BY meetings.date DESC
 LIMIT 10;
 
-SELECT payrolls.salary + payrolls.bonus AS total_pay, employee_id.firstname, employee_id.lastname
+SELECT payrolls.salary + payrolls.bonus AS total_pay, employees.firstname, employees.lastname
 FROM payrolls
-INNER JOIN employees AS employee_id ON payrolls.employee_id = employee_id.id
+INNER JOIN employees ON payrolls.employee_id = employees.id
 WHERE payrolls.date BETWEEN '2024-04-01' AND '2024-04-30'
 ORDER BY total_pay DESC
 LIMIT 1;
